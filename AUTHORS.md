@@ -113,3 +113,4 @@
 * [sonologic](mailto:gmc@sonologic.nl)
 * [tflidd](mailto:tflidd@aspekte.net)
 * [wizdude](mailto:wizdude@users.noreply.github.com)
+* [Elouan Martinet](mailto:exa@elou.world)
