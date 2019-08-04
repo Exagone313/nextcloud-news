@@ -125,6 +125,20 @@ style('news', 'admin');
         <p><input type="text" name="news-explore-url"
                value="<?php p($_['exploreUrl']); ?>"></p>
     </div>
+    <div class="form-line">
+        <p><input type="checkbox" name="news-download-resources"
+               <?php if ($_['downloadResources']) p('checked'); ?>>
+            <label for="news-download-resources">
+                <?php p($l->t('Download feed resources on the server')); ?>
+            </label>
+        </p>
+        <p>
+            <em><?php p($l->t(
+                'If set, resources will be downloaded on the server when ' .
+                'fetching feeds rather than being downloaded by client browsers'
+            )); ?></em>
+        </p>
+    </div>
     <div id="news-saved-message">
         <span class="msg success"><?php p($l->t('Saved')); ?></span>
     </div>

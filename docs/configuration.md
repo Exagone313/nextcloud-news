@@ -12,6 +12,7 @@ maxSize = 104857600
 feedFetcherTimeout = 60
 useCronUpdates = true
 exploreUrl =
+downloadResources = false
 ```
 
 
@@ -22,3 +23,4 @@ exploreUrl =
 * **feedFetcherTimeout**: Maximum number of seconds to wait for an RSS or Atom feed to load. If a feed takes longer than that number of seconds to update, the update will be aborted
 * **useCronUpdates**: To use a custom update/cron script you need to disable the cronjob which is run by Nextcloud by default by setting this to false
 * **exploreUrl**: If given that url will be contacted for fetching content for the explore feed
+* **downloadResources**: If set, feed resources will be downloaded on the server

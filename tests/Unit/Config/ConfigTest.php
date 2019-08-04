@@ -50,6 +50,7 @@ class ConfigTest extends TestCase
         $this->assertEquals(true, $this->config->getUseCronUpdates());
         $this->assertEquals('', $this->config->getExploreUrl());
         $this->assertEquals(1024*1024*100, $this->config->getMaxSize());
+        $this->assertEquals(false, $this->config->getDownloadResources());
     }
 
 

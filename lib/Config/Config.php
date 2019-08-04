@@ -32,6 +32,7 @@ class Config
     private $loggerParams;
     private $maxSize;
     private $exploreUrl;
+    private $downloadResources;
 
     public function __construct(
         Folder $fileSystem,
@@ -47,6 +48,7 @@ class Config
         $this->useCronUpdates = true;
         $this->logger = $logger;
         $this->exploreUrl = '';
+        $this->downloadResources = false;
         $this->loggerParams = $LoggerParameters;
     }
 
@@ -95,6 +97,12 @@ class Config
     }
 
 
+    public function getDownloadResources()
+    {
+        return $this->downloadResources;
+    }
+
+
     public function setAutoPurgeMinimumInterval($value)
     {
         $this->autoPurgeMinimumInterval = $value;
@@ -133,6 +141,12 @@ class Config
     public function setExploreUrl($value)
     {
         $this->exploreUrl = $value;
+    }
+
+
+    public function setDownloadResources($value)
+    {
+        $this->downloadResources = $value;
     }
 
 
@@ -185,7 +199,9 @@ class Config
             'feedFetcherTimeout = ' .
                 $this->feedFetcherTimeout . "\n" .
             'useCronUpdates = ' .
-                var_export($this->useCronUpdates, true);
+                var_export($this->useCronUpdates, true) . "\n" .
+			'downloadResources = ' .
+				var_export($this->downloadResources, true);
         ;
 
         $this->fileSystem->get($configPath)->putContent($ini);
