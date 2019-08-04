@@ -56,6 +56,15 @@
                        id="settings-oldestFirst">
                 <label for="settings-oldestFirst"><?php p($l->t('Reverse ordering (oldest on top)')); ?></label>
             </li>
+            <li class="settings-fieldset-interior-item">
+                <input type="checkbox"
+                       class="checkbox"
+                       ng-click="Settings.toggleSetting('downloadResources')"
+                       ng-checked="Settings.getSetting('downloadResources')"
+                       name="downloadResources"
+                       id="settings-downloadResources">
+                <label for="settings-downloadResources"><?php p($l->t('Download resources on Nextcloud')); ?></label>
+            </li>
         </ul>
     </fieldset>
 

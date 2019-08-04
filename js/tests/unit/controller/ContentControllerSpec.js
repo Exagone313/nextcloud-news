@@ -294,6 +294,20 @@ describe('ContentController', function () {
     }));
 
 
+    it('should publish download resources',
+        inject(function ($controller, SettingsResource) {
+
+            SettingsResource.set('downloadResources', true);
+
+            var ctrl = $controller('ContentController', {
+                SettingsResource: SettingsResource,
+                data: {},
+            });
+
+            expect(ctrl.isDownloadResources()).toBe(true);
+        }));
+
+
     it('should mark multiple items read',
         inject(function ($controller, ItemResource, FeedResource, Publisher) {
 

@@ -19,6 +19,7 @@ app.service('SettingsResource', function ($http, BASE_URL) {
         oldestFirst: null,
         preventReadOnScroll: false,
         compactExpand: false,
+        downloadResources: false,
         exploreUrl: ''
     };
     this.defaultLanguageCode = 'en';
@@ -63,7 +64,8 @@ app.service('SettingsResource', function ($http, BASE_URL) {
                 compact: this.settings.compact,
                 oldestFirst: this.settings.oldestFirst,
                 compactExpand: this.settings.compactExpand,
-                preventReadOnScroll: this.settings.preventReadOnScroll
+                preventReadOnScroll: this.settings.preventReadOnScroll,
+                downloadResources: this.settings.downloadResources
             }
         });
     };

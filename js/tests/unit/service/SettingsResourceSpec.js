@@ -43,7 +43,8 @@ describe('SettingsResource', function () {
             'compact': false,
             'oldestFirst': null,
             'compactExpand': false,
-            'preventReadOnScroll': false
+            'preventReadOnScroll': false,
+            'downloadResources': false
         }).respond(200, {});
 
         SettingsResource.set('showAll', true);

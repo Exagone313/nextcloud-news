@@ -106,7 +106,8 @@ class PageController extends Controller
             'compact',
             'preventReadOnScroll',
             'oldestFirst',
-            'compactExpand'
+            'compactExpand',
+            'downloadResources'
         ];
 
         $exploreUrl = $this->config->getExploreUrl();
@@ -148,14 +149,16 @@ class PageController extends Controller
         $compact,
         $preventReadOnScroll,
         $oldestFirst,
-        $compactExpand
+        $compactExpand,
+        $downloadResources
     ) {
         $settings = [
             'showAll',
             'compact',
             'preventReadOnScroll',
             'oldestFirst',
-            'compactExpand'
+            'compactExpand',
+            'downloadResources'
         ];
 
         foreach ($settings as $setting) {
